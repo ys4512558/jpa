@@ -28,7 +28,8 @@ public class ProductController {
 
     @GetMapping()
     public ResponseEntity<ProductResponseDto> getProduct(Long arg0){
-        //arg0으로 한 이유 : swagger에서 ?arg0=value로 형식을 만들어놔서 swagger에서 수행해보려면 arg0=value로 해야함
+        //arg0으로 한 이유 : swagger에서 ?arg0=value로
+        // 형식을 만들어놔서 swagger에서 수행해보려면 arg0=value로 해야함
         Long number = arg0;
         LOGGER.info("number : " + number);
         ProductResponseDto productResponseDto = productService.getProduct(number);
